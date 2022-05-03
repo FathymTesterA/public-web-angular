@@ -6,13 +6,15 @@ on:
   pull_request:
     branches: [main]
 
+permissions: write-all
+
 env:
   Branches: main
   MainBranch: main
   NPMRegistry: https://registry.npmjs.org/
-  InstallCommand: npm i
+  InstallCommand: npm ci
   BuildCommand: npm run build
-  Output: ./dist
+  Output: ./dist/angular-typescript-app
 
 jobs:
   build:
